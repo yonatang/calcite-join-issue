@@ -1,5 +1,7 @@
 # Calcite DynamicRecordType join issue
 
+https://issues.apache.org/jira/browse/CALCITE-6341
+
 This repo demonstrate an issue with Calcite - using custom schema 
 that has a table with DynamicRecordType will fail to join with another table,
 the generated code will not get compiled, as it will create this Comparator:
@@ -25,5 +27,5 @@ new java.util.Comparator(){
 The issue will only reproduce with Calcite 1.23 and above, and only with 
 DynamicRecordType rowType.
 
-To reproduce the issue, run the `calcite.issue.Run.main()` method. It will
+To reproduce the issue, run the [`calcite.issue.Run.main()`](src/main/java/calcite/issue/Run.java) method. It will
 execute a few queries that works, and one that will fail.
