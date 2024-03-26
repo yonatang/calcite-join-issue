@@ -1,0 +1,12 @@
+{
+  "version": "1.0",
+  "defaultSchema": "myschema",
+  "schemas": [
+    {
+      "name": "myschema",
+      "type": "custom",
+      "factory": "calcite.issue.dynamic.MySchemaFactory",
+      "operand": {}
+    }
+  ]
+}
